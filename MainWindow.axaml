@@ -1,0 +1,17 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:rootns="clr-namespace:AvaLagTest"
+        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        x:Class="AvaLagTest.MainWindow"
+        Title="AvaLagTest">
+    <Design.DataContext>
+        <rootns:MainWindowViewModel />
+    </Design.DataContext>
+    <Grid RowDefinitions="*,40,*">
+        <Button Grid.Row="0" Click="StartLogging" HorizontalAlignment="Center">Start A Log Thread</Button>
+        <TextBlock Grid.Row="1" VerticalAlignment="Center" HorizontalAlignment="Center" Text="{Binding Summary}"></TextBlock>
+        <TextBox Grid.Row="2" Text="{Binding LogText}"></TextBox>
+    </Grid>
+</Window>
